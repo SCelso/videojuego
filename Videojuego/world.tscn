@@ -33,6 +33,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 2 )
 
 [node name="Enemy" type="KinematicBody2D" parent="."]
+position = Vector2( 351, 3 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
@@ -48,5 +49,5 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D"]
 shape = SubResource( 4 )
 
-[connection signal="body_entered" from="Player/Area2D" to="Enemy" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Enemy/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Enemy/Area2D" to="Enemy" method="_on_Area2D_body_entered"]
