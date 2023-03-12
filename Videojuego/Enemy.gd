@@ -11,7 +11,7 @@ func _physics_process(delta):
 
 	position += (player.position - position)/50
 	look_at(player.position)
-	if position < player.position +Vector2(180,180):
+	if position < player.position +Vector2(150,150):
 		_animated_sprite.play("attack")
 	else:
 		_animated_sprite.play("move")
