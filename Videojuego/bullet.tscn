@@ -6,7 +6,7 @@
 extents = Vector2( 4, 1.8 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10.9082, 3.13441 )
+extents = Vector2( 10.9082, 3.05743 )
 
 [node name="bullet" type="RigidBody2D"]
 
