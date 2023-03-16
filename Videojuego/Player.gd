@@ -78,7 +78,7 @@ func fire():
 	
 
 func kill():
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://UI/GameOverScreen.tscn")
 
 
 
