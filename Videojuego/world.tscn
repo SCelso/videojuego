@@ -197,9 +197,31 @@ scale = Vector2( 0.996891, 1.05849 )
 frames = SubResource( 5 )
 animation = "reload"
 
+[node name="Enemy2" type="KinematicBody2D" parent="."]
+material = SubResource( 8 )
+position = Vector2( -2398, -1945 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+position = Vector2( -12, 16 )
+shape = SubResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="Enemy2"]
+scale = Vector2( 1, 0.823655 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/Area2D"]
+position = Vector2( -12, 16 )
+shape = SubResource( 11 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Enemy2"]
+material = SubResource( 10 )
+frames = SubResource( 9 )
+animation = "move"
+frame = 16
+
 [node name="Enemy" type="KinematicBody2D" parent="."]
 material = SubResource( 8 )
-position = Vector2( 351, 3 )
+position = Vector2( 1921, 1886 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
@@ -235,5 +257,52 @@ tile_data = PoolIntArray( -2162729, 0, 0, -2162728, 0, 0, -2162727, 0, 0, -21627
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.27451, 0.27451, 0.27451, 1 )
 
+[node name="Enemy3" type="KinematicBody2D" parent="."]
+material = SubResource( 8 )
+position = Vector2( -2171, 1903 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3"]
+position = Vector2( -12, 16 )
+shape = SubResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="Enemy3"]
+scale = Vector2( 1, 0.823655 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/Area2D"]
+position = Vector2( -12, 16 )
+shape = SubResource( 11 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Enemy3"]
+material = SubResource( 10 )
+frames = SubResource( 9 )
+animation = "move"
+frame = 16
+
+[node name="Enemy4" type="KinematicBody2D" parent="."]
+material = SubResource( 8 )
+position = Vector2( 2245, -1994 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4"]
+position = Vector2( -12, 16 )
+shape = SubResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="Enemy4"]
+scale = Vector2( 1, 0.823655 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4/Area2D"]
+position = Vector2( -12, 16 )
+shape = SubResource( 11 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Enemy4"]
+material = SubResource( 10 )
+frames = SubResource( 9 )
+animation = "move"
+frame = 16
+
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Enemy2/Area2D" to="Enemy2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Enemy/Area2D" to="Enemy" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Enemy3/Area2D" to="Enemy3" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Enemy4/Area2D" to="Enemy4" method="_on_Area2D_body_entered"]

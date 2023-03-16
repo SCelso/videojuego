@@ -15,7 +15,9 @@ func _physics_process(delta):
 		_animated_sprite.play("attack")
 	else:
 		_animated_sprite.play("move")
+		
 	move_and_collide(motion)
+
 
 
 func _on_Area2D_body_entered(body):
